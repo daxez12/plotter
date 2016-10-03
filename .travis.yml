@@ -7,8 +7,7 @@ install:
 
 before script:
   - autopep8 -ir *
-  - flake8 --max-complexity=15 --exclude=* .txt,*.md --max-line-length=200 *
+  - flake8 --max-complexity=15 --exclude=* .txt,*.md *
 
 script:
-  - cd test
-  - python testCalculator.py
+  - python test_figuras.py -v
